@@ -70,6 +70,10 @@
     </form> -->
       </div>
     </nav>
+     <div>
+    <sidebar-menu-akahon
+      @search-input-emit="search"/>
+    </div>
 
     <!-- pushNewName 是內部向外拋出的事件 -->
     <!-- getNewName 是外部接收的方法 -->
@@ -78,8 +82,12 @@
 </template>
 
 <script>
+import SidebarMenuAkahon from "@/components/Sidebar-menu-akahon.vue"
 export default {
   name: "App",
+  components: {
+    SidebarMenuAkahon,
+  },
   data(){
     return {
       gender :'',
