@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
       <a class="navbar-brand" href="#">Navbar</a>
       <button
         class="navbar-toggler"
@@ -58,9 +58,9 @@
         </ul>
         <div class="dropdown">
           <select name="" class="form-control" @change="onchange" v-model="gender" >
-            <option value="">All</option>
+            <option value="all">All</option>
             <option value="female">Female</option>
-            <option value="man">Man</option>
+            <option value="male">Man</option>
           </select>
         </div>
         <div class="nav-text">Hi,{{userName}}</div>
@@ -70,14 +70,17 @@
     </form> -->
       </div>
     </nav>
-     <div>
-    <sidebar-menu-akahon
-      @search-input-emit="search"/>
+    
+    <!-- 選單 -->
+    <div>
+    <sidebar-menu-akahon />
+    <!-- <sidebar-menu-akahon @search-input-emit="search"/> -->
     </div>
 
     <!-- pushNewName 是內部向外拋出的事件 -->
     <!-- getNewName 是外部接收的方法 -->
-    <router-view :gender = "appgender" @pushNewName="getNewName"></router-view>
+    <!-- child 是外部觸發內部方法 -->
+    <router-view :gender = "appgender" @pushNewName="getNewName" ref="membersSearch"></router-view>
   </div>
 </template>
 
@@ -99,6 +102,8 @@ export default {
     onchange (){
       console.log(this.gender)
       this.appgender = this.gender
+      //觸發內部方法
+      this.$refs.membersSearch.getDataBySearch(this.appgender);
     },
 
     // getNewName 是接收用的事件
@@ -122,6 +127,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 </style>
