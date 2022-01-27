@@ -51,7 +51,7 @@
             >
             <span class="tooltip">{{ searchTooltip }}</span>
           </li>
-
+            <!-- menu items 存放處-->
           <span
             v-for="(menuItem, index) in menuItems"
             :key="index"
@@ -136,7 +136,6 @@
         type: String,
         default: '78px'
       },
-
       //! Menu items
       menuItems: {
         type: Array,
@@ -191,7 +190,6 @@
           },
         ],
       },
-
       //! Search
       isSearch: {
         type: Boolean,
@@ -205,25 +203,23 @@
         type: String,
         default: 'Search',
       },
-
       //! Profile detailes
       profileImg: {
         type: String,
-        default: require('../assets/img/photo.jpg'),
+        default: require('../assets/logo.png'),
       },
       profileName: {
         type: String,
-        default: 'Fayzullo Saidakbarov',
+        default: 'Tobey Wang',
       },
       profileRole: {
         type: String,
-        default: 'Frontend vue developer',
+        default: 'Adminstrator',
       },
       isExitButton: {
         type: Boolean,
         default: true,
       },
-
       //! Styles
       bgColor: {
         type: String,
@@ -599,6 +595,4 @@
       display: none;
     }
 }
-
-
 </style>
