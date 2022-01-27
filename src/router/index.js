@@ -4,6 +4,12 @@ import HelloWorld from '@/components/HelloWorld'
 import HelloWorld2 from '@/components/HelloWorld2'
 import Members from '@/components/Members'
 // bootstrap  and bootstrap-vaue
+//if support iE nee core-js/stable and runtime and intersection-.../ balbel-polyfill
+//import 'core-js/stable'
+//import 'regenerator-runtime/runtime'
+import 'babel-polyfill'
+import 'intersection-observer' // Optional
+
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
