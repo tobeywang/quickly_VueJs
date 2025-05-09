@@ -1,5 +1,9 @@
-這是一個SSR(SERVER - SIDE REDERING) 的運作模式
-伺服器端需安裝NODE.JS驅動原始碼進行畫面渲染，利於SEO(搜尋引擎可以直接看到完全渲染的頁面內容)
+# SSR (SERVER-SIDE RENDERING) 運作模式
+
+伺服器端需安裝 NODE.JS 驅動原始碼進行畫面渲染，利於 SEO（搜尋引擎可以直接看到完全渲染的頁面內容）
+
+## 專案結構
+```
 quickly_VueJs/
 ├── build/                  # webpack 處理
 │   ├── build.js            # 打包主檔
@@ -31,3 +35,4 @@ quickly_VueJs/
 ├── package.json            # 依賴和腳本
 ├── index.html              # HTML 模板
 └── vue.config.js           # Vue CLI 配置
+```
