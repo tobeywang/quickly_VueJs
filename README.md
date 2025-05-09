@@ -1,6 +1,6 @@
-# SSR (SERVER-SIDE RENDERING) 運作模式
+# SPA (Single Page Application 單頁應用程式) 運作模式
 
-伺服器端需安裝 NODE.JS 驅動原始碼進行畫面渲染，利於 SEO（搜尋引擎可以直接看到完全渲染的頁面內容）
+在瀏覽器中加載單個 HTML 頁面，並通過 JavaScript 動態更新頁面內容的應用程式
 
 ## 專案結構
 ```
