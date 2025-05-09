@@ -36,3 +36,7 @@ quickly_VueJs/
 ├── index.html              # HTML 模板
 └── vue.config.js           # Vue CLI 配置
 ```
+## 前置安裝
+#### 1.先確認你已經安裝了 Node.js
+#### 2.在專案資料夾中執行 npm install 安裝依賴
+#### 3.執行 npm run dev 啟動開發伺服器 
